@@ -10,33 +10,23 @@ snap install code --classic
 snap install discord spotify 
 
 echo "apps"
-sudo apt install mc tilda tree npm chromium-browser -y
+sudo apt install mc gcc make tilda tree npm chromium-browser -y
 
-echo "Installing i3-gaps"
+echo "Trying to remove i3"
 
-echo "Dependencies"
-sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev \
-libxcb-util0-dev libxcb-icccm4-dev libyajl-dev \
-libstartup-notification0-dev libxcb-randr0-dev \
-libev-dev libxcb-cursor-dev libxcb-xinerama0-dev \
-libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev \
-autoconf libxcb-xrm0 libxcb-xrm-dev automake libxcb-shape0-dev
+sudo apt remove --purge i3*
 
-echo "Clone repo"
-cd /tmp
-git clone https://www.github.com/Airblader/i3 i3-gaps
-cd i3-gaps
+echo "install i3"
 
-echo "Compile and install"
-autoreconf --force --install
-rm -rf build/
-mkdir -p build && cd build/
+sudo apt-get install i3 compton hsetroot rxvt-unicode xsel rofi fonts-noto fonts-mplus xsettingsd lxappearance scrot viewnior
 
-# Disabling sanitizers is important for release versions!
-# The prefix and sysconfdir are, obviously, dependent on the distribution.
-../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers
-make
-sudo make install
+echo "clone my configs"
 
-echo "Reboot for good measure"
+git clone https://github.com/cutratefuture/eyethreeness.git
+
+echo "cd and copy"
+cd  eyethreeness
+cp * -rf ~
+
+echo "reboot"
 sudo reboot
