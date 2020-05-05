@@ -7,7 +7,7 @@ sudo apt install snap -y
 
 echo "snap installs"
 snap install cool-retro-term  code --classic
-snap install discord spotify
+snap install discord spotify virtualbox 
 
 echo "apps"
 sudo apt install mc tilda tree npm neofetch chromium-browser -y
