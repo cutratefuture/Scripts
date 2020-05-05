@@ -27,7 +27,7 @@ echo "Trying to remove i3"
 sudo apt remove --purge i3*
 
 echo "install i3"
-sudo apt-get install i3 compton hsetroot rxvt-unicode xsel rofi fonts-noto fonts-mplus xsettingsd lxappearance scrot viewnior
+sudo apt-get install i3 compton hsetroot rxvt-unicode xsel rofi fonts-noto fonts-mplus xsettingsd lxappearance scrot viewnior -y
 
 echo "clone my configs"
 git clone https://github.com/cutratefuture/eyethreeness.git
