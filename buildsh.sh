@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "update"
-sudo apt update && apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 
 echo "install snap"
 sudo apt install snap -y
