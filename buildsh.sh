@@ -7,10 +7,21 @@ sudo apt install snap -y
 
 echo "snap installs"
 snap install code --classic 
-snap install discord spotify 
+snap install discord
 
 echo "apps"
-sudo apt install mc gcc make tilda tree npm chromium-browser -y
+sudo apt install mc gcc make tilda tree npm -y
+
+echo "node"
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n latest
+
+echo "yarn"
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt install yarn -y
+
 
 echo "Trying to remove i3"
 
