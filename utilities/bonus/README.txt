@@ -1,0 +1,1 @@
+these are just some softwares i use on my local machines, nothing special
