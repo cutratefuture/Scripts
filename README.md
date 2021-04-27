@@ -22,7 +22,7 @@ then
  ```./path/to/script.sh ```
 
 ## WARNING
-Many of these scripts require sudo and will add repos and install software(s) to your system! Make sure you have adequate permissions before proceedng.
+Many of these scripts require sudo and will add repos and install software(s) to your system! Scripts are provided AS IS, and I am not responsible if your destroy your server.
 
 
 ps. always ```cat``` your scripts before you run them, never trust anons on the internet!
