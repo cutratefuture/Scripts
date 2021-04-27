@@ -17,7 +17,9 @@ echo '#alias created from script' >> ~/.bashrc
 echo alias $a=\'$c\' >> ~/.bashrc
 #success message
 echo 'alias entered'
+
 # tail end of bashrc to confirm
 tail ~/.bashrc
+
 #loads new bashrc
 source ~/.bashrc
