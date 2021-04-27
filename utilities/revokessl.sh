@@ -1,5 +1,6 @@
 #!/bin/bash
 # certbot revoke script
+# RUN AT YOUR OWN RISK! - untested as of 4/26
 # switch to root to output the contents of dir
 echo "list of SSL certs installed:"
 sudo ls -la /etc/letsencrypt/archive/
