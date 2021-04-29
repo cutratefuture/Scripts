@@ -14,7 +14,7 @@ if [ $(id -u) -eq 0 ]; then
 		exit 1
 	else
 		pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
-		useradd -m -p "$pass" "$username" 
+		adduser -m -p "$pass" "$username" 
 		usermod -aG sudo $username
 		[ $? -eq 0 ] && echo -e "${green}User has been added to system!${reset}" || echo -e "${red}Failed to add a user!${reset}"
 	fi
