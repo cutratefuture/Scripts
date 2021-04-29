@@ -10,15 +10,15 @@ if [ $(id -u) -eq 0 ]; then
 	read -s -p "Enter password : " password
 	egrep "^$username" /etc/passwd >/dev/null
 	if [ $? -eq 0 ]; then
-		echo "$username ${red}exists${reset}!"
+		echo -e "$username ${red}exists${reset}!"
 		exit 1
 	else
 		pass=$(perl -e 'print crypt($ARGV[0], "password")' $password)
 		useradd -m -p "$pass" "$username" 
 		usermod -aG sudo $username
-		[ $? -eq 0 ] && echo "${green}User has been added to system!${reset}" || echo "${red}Failed to add a user!${reset}"
+		[ $? -eq 0 ] && echo -e "${green}User has been added to system!${reset}" || echo -e "${red}Failed to add a user!${reset}"
 	fi
 else
-	echo "${red}Only root may add a user to the system.${reset}"
+	echo -e "${red}Only root may add a user to the system.${reset}"
 	exit 2
 fi
