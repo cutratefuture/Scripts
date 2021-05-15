@@ -423,3 +423,6 @@ nvm_reset() {
 [ "_$NVM_ENV" = "_testing" ] || nvm_do_install
 
 } # this ensures the entire script is downloaded #
+
+#courtesy for myself
+nvm install --lts && nvm install-latest-npm && npm install --global yarn
