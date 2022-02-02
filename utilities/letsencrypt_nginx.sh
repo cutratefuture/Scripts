@@ -1,3 +1,4 @@
+#@cutratefuture v0.0.1
 #!/bin/bash
 #install certbot for nginx
 if ! command -v certbot &> /dev/null
